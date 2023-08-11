@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+
+  frontend:
+    image: frontend
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:3000
+
+
+  backend:
+    image: backend
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 5000:5000
+
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: 301161097
+      POSTGRES_USER: postgres
+      POSTGRES_DB: miniurl
+
+    volumes:
+      - ./backend/pg/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql

@@ -1,0 +1,213 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  color: white;
+  align-content: normal;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  font-size: 2rem;
+}
+
+.App-header .preview-btn{
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+  border: white solid 1px;
+  border-radius: 5px;
+}
+
+.App-header .logo{
+  color: white;
+  text-decoration: none;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.shorten-url{
+  display: flex;
+}
+
+.urls-container{
+  font-size: 1.25rem;
+  border: 1px solid black;
+  border-radius: 0.4rem;
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 45%;
+  padding: 2rem;
+  display: flex;
+}
+
+.txt-container{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  right: 2rem;
+}
+
+.enter-url{
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.enter-url p{
+  text-align: left;
+  margin: 0;
+}
+
+.enter-url input{
+  border-radius: 0.4rem;
+  border: #6c757d 1px solid;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.enter-url button{
+  background-color: #1f8244;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.show-url{
+  color: #1f8244;
+  font-size: 1.25rem;
+  border-radius: 0.4rem;
+  border: #6c757d 1px solid;
+  padding: 1rem;
+  max-width: 100%; /* מגביל את רוחב התא לאורך המסגרת */
+  overflow: hidden; /* מונע מהטקסט לגלוש מהתא */
+  text-overflow: ellipsis; /* מציג ellipsis אם הטקסט חורג מהתא */
+  white-space: nowrap;
+}
+
+.redirects-page{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.redirects-page p{
+  margin: 1.25rem;
+  color: #212529;
+}
+
+.redirects-page .url {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.25rem;
+  color: #0980a1;
+}
+
+.redirects-page a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.redirects-page a:hover {
+  color:#054659;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-table {
+  border-collapse: collapse; /* מרכיב את הגבולות עבור תאי הטבלה */
+  width: 100%;
+  table-layout: fixed;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ddd; /* הוספת מסגרת עדינה לתאים */
+  padding: 8px; /* הוספת מרווח בין התוכן לגבולות התא */
+  text-align: center; /* מרכז את התוכן בתא */
+  width: 50%;
+}
+
+.custom-table th {
+  background-color: #f2f2f2; /* צבע רקע לכותרת הטבלה */
+}
+
+.display-urls {
+  margin-inline: 7rem;
+  margin-block: 2rem;
+
+}
+
+.display-urls a{
+  text-decoration: none;
+}
+
+.cell{
+  cursor: text;
+  overflow: hidden; /* במידה והתוכן גדול מידי, ישומר תוך חיתוך */
+  white-space: nowrap; /* נותן לטקסט להישאר בשורה אחת לאורך */
+  text-overflow: ellipsis;
+  width: 40%;
+}
+
+tr{
+  width: 100%;
+}
+
+.loader-container {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: calc(100vh / 3);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.loader {
+  width: 6rem;
+  height: 6rem;
+  border: 0.8rem solid #060606;
+  border-top: 8px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
